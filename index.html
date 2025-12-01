@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraOrganics - Life is Green</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons for elegant line-art icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Setup: Elegant Serif for Headings and clean Sans for Body */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&display=swap');
+        
+        :root {
+            --color-gold: #FFD700;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        /* Custom style for the large, elegant headline */
+        .elegant-headline {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--color-gold);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Styling for the hero background texture */
+        .hero-background {
+            /* Using a dark, moody placeholder image URL to simulate texture */
+            background-image: url('Gemini_Generated_Image_c6nggcc6nggcc6ng.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 0;
+        }
+
+        .gold-icon {
+            color: var(--color-gold);
+        }
+        
+        .gold-line {
+            background-color: var(--color-gold);
+        }
+
+        /* Product Card Hover Effect */
+        .product-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            border: 1px solid transparent;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        /* Gold Line Separator */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, #000000, var(--color-gold), #000000);
+            width: 80%;
+            margin: 4rem auto;
+        }
+        #except1{
+            height: 84%;
+        }
+        #except2{
+            height: 73%;
+        }
+
+        @media (max-width: 500px){
+            #Aura{
+                font-size:medium;
+            }
+        }
+    </style>
+</head>
+<body class="selection:bg-yellow-700 selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-black/90 border-b border-gray-900 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center text-xl font-extrabold tracking-wider">
+                    <i data-lucide="leaf" class="w-6 h-6 mr-2 gold-icon"></i>
+                    <span class="text-white">Aura</span><span class="gold-icon">Organics</span>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-6 text-white/80 font-light text-sm">
+                    <a href="#" class="hover:text-amber-500 transition-colors">Home</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Skin</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Hair</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Promo Corner</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">About Us</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Contact Us</a>
+                    <a href="#" class="hover:text-amber-500 transition-colors">Order Tracking</a>
+                </nav>
+
+                <!-- User Actions (Icons) -->
+                <div class="flex items-center space-x-4">
+                    <i data-lucide="search" class="w-5 h-5 gold-icon cursor-pointer hover:opacity-80"></i>
+                    <i data-lucide="shopping-cart" class="w-5 h-5 gold-icon cursor-pointer hover:opacity-80"></i>
+                    <i data-lucide="user" class="w-5 h-5 gold-icon cursor-pointer hover:opacity-80"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-background min-h-[85vh] flex items-center justify-center py-20">
+        <div class="absolute inset-0 bg-black/50 z-10"></div> <!-- Dark overlay -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Text Overlay (Left) -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <!-- Large, Elegant Headline -->
+                <h1 class="text-6xl md:text-8xl elegant-headline leading-tight">
+                    Life is Green
+                </h1>
+                
+                <!-- 5-Star Rating Graphic -->
+                <div class="flex justify-center lg:justify-start space-x-1">
+                    <i data-lucide="star" class="w-5 h-5 gold-icon fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 gold-icon fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 gold-icon fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 gold-icon fill-current"></i>
+                    <i data-lucide="star-half" class="w-5 h-5 gold-icon fill-current"></i>
+                </div>
+
+                <!-- Descriptive Paragraph -->
+                <p class="text-xl text-white/90 max-w-md mx-auto lg:mx-0">
+                    Discover the latest raw & wonderful soothing and healing skincare products. Handcrafted with the purest organic ingredients, just for you.
+                </p>
+
+                <!-- CTA Button -->
+                <button class="mt-8 py-3 px-8 text-sm uppercase font-semibold tracking-wider text-black bg-white hover:bg-amber-500 hover:text-white transition duration-300 shadow-lg shadow-black/50">
+                    Shop Now
+                </button>
+            </div>
+
+            <!-- Product Showcase (Right) -->
+            <div class="lg:col-span-6 flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-lg h-96">
+                    <!-- Placeholder Images for 5-7 products -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Line Divider -->
+    <div class="section-divider"></div>
+
+    <!-- 2. Trust & Values Section (OUR COMMITMENTS) -->
+    <section id="commitments" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-2xl uppercase tracking-widest font-bold text-white mb-12">
+                Our Commitments
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+                
+                <!-- Commitment Card 1: Organic Seal -->
+                <div class="space-y-3">
+                    <i data-lucide="leaf" class="w-8 h-8 gold-icon mx-auto"></i>
+                    <p class="text-lg font-semibold gold-icon">Organic Seal</p>
+                    <p class="text-sm text-white/70">Certified ingredients guarantee the highest purity.</p>
+                </div>
+
+                <!-- Commitment Card 2: Cruelty-Free -->
+                <div class="space-y-3">
+                    <i data-lucide="heart" class="w-8 h-8 gold-icon mx-auto"></i>
+                    <p class="text-lg font-semibold gold-icon">Cruelty-Free</p>
+                    <p class="text-sm text-white/70">Tested by humans, loved by all creatures.</p>
+                </div>
+
+                <!-- Commitment Card 3: Recyclable -->
+                <div class="space-y-3">
+                    <i data-lucide="refresh-cw" class="w-8 h-8 gold-icon mx-auto"></i>
+                    <p class="text-lg font-semibold gold-icon">Recyclable</p>
+                    <p class="text-sm text-white/70">Sustainable packaging for a better planet.</p>
+                </div>
+
+                <!-- Commitment Card 4: Halal Certified -->
+                <div class="space-y-3">
+                    <i data-lucide="check-square" class="w-8 h-8 gold-icon mx-auto"></i>
+                    <p class="text-lg font-semibold gold-icon">Halal Certified</p>
+                    <p class="text-sm text-white/70">Ethically sourced and prepared ingredients.</p>
+                </div>
+
+                <!-- Commitment Card 5: Fast Shipping -->
+                <div class="space-y-3">
+                    <i data-lucide="truck" class="w-8 h-8 gold-icon mx-auto"></i>
+                    <p class="text-lg font-semibold gold-icon">Fast Shipping</p>
+                    <p class="text-sm text-white/70">Delivered to your door, quickly and safely.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gold Line Divider -->
+    <div class="section-divider"></div>
+
+    <!-- 3. Product Grid Section (OUR PRODUCTS) -->
+    <section id="products" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-3xl uppercase tracking-widest font-bold text-white mb-16">
+                Our Products
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                
+                <!-- Product Card Loop (12 mock products) -->
+                <div class="product-card">
+                    <img id="except1" class="w-full h-auto object-cover rounded-lg" src="new.png" alt="Face Glow Kit">
+                    <p class="mt-4 text-center text-white/90">Face Glow Kit</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 150.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_gp6bligp6bligp6b.png" alt="Radiance Toner">
+                    <p class="mt-4 text-center text-white/90">Radiance Toner</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 99.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_xaqv89xaqv89xaqv.png" alt="Purifying Mask">
+                    <p class="mt-4 text-center text-white/90">Purifying Mask</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 120.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_dmya1wdmya1wdmya.png" alt="Body Butter">
+                    <p class="mt-4 text-center text-white/90">Silken Body Butter</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 180.00</p>
+                </div>
+                
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_p66lp9p66lp9p66l.png" alt="Shampoo">
+                    <p class="mt-4 text-center text-white/90">Volumizing Shampoo</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 85.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_p66lp9p66lp9p66l.png" alt="Conditioner">
+                    <p class="mt-4 text-center text-white/90">Restorative Conditioner</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 85.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_zf41k7zf41k7zf41.png" alt="Cleanser">
+                    <p class="mt-4 text-center text-white/90">Gentle Cleanser</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 110.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_iio350iio350iio3.png" alt="Night Cream">
+                    <p class="mt-4 text-center text-white/90">Overnight Repair Cream</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 210.00</p>
+                </div>
+
+                 <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_2b3mkg2b3mkg2b3m.png" alt="Lip Balm">
+                    <p class="mt-4 text-center text-white/90">Nourishing Lip Balm</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 45.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_dy1h7vdy1h7vdy1h.png" alt="Exfoliating Scrub">
+                    <p class="mt-4 text-center text-white/90">Exfoliating Scrub</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 135.00</p>
+                </div>
+                <div class="product-card">
+                    <img class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_uf20buuf20buuf20.png" alt="Hydrating Mask">
+                    <p class="mt-4 text-center text-white/90">Ultimate Hydrating Mask</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 165.00</p>
+                </div>
+                <div class="product-card">
+                    <img id="except2" class="w-full h-auto object-cover rounded-lg" src="Gemini_Generated_Image_te5m7ate5m7ate5m.png" alt="Face Mist">
+                    <p class="mt-4 text-center text-white/90">Rosewater Face Mist</p>
+                    <p class="text-lg font-bold text-center gold-icon">AED 75.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="bg-black border-t border-gray-900 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                
+                <!-- Logo & Disclaimer -->
+                <div class="space-y-4">
+                    <div id="Aura" class="flex items-center text-2xl font-extrabold tracking-wider">
+                        <i data-lucide="leaf" class="w-7 h-7 mr-2 gold-icon"></i>
+                        <span class="text-white">Aura</span><span class="gold-icon">Organics</span>
+                    </div>
+                    <p class="text-xs text-white/50">&copy; 2024 AuraOrganics. All Rights Reserved.</p>
+                    <p class="text-xs text-white/50">Location: Sharjah Media City, SHAMS</p>
+                </div>
+
+                <!-- Information -->
+                <div>
+                    <h3 class="font-semibold gold-icon mb-4">Information</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="hover:text-white">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white">Customer Care</a></li>
+                        <li><a href="#" class="hover:text-white">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Policies -->
+                <div>
+                    <h3 class="font-semibold gold-icon mb-4">Policies</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Shipping & Returns</a></li>
+                        <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold gold-icon mb-4">Contact</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li>info@auraorganics.com</li>
+                        <li>+971 50 555 1234</li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
